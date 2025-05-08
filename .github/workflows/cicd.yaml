@@ -56,9 +56,4 @@ jobs:
     - name: Image-digest
       uses: echo ${{steps.build-and-publish.outputs.digest}}   
 
-      run: |
-        docker build -t myapp:latest .
-        docker tag myapp:latest mydockerhubusername/myapp:latest
-        docker push mydockerhubusername/myapp:latest
-
-    # Optional: Deploy to Render or another platform using HTTP request or CLI
+      
